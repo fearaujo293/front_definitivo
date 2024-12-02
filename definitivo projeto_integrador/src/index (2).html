@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MySchool.com</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/icon-default.png" type="image/x-icon">
+  
+</head>
+<body>
+  <header class="header">
+    <h1>MySchool.com</h1>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#" class="logout">Logout (User)</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Lista de Alunos -->
+    <section class="container">
+      <div class="title-row">
+        <h2>Lista de Alunos</h2>
+        <button id="b1-newStudent" class="new-button" >
+          <img  class="img-novo" src="img/add_circle.png" alt="Novo Aluno">
+          Novo
+        </button>
+      </div>
+      <table class="students-table">
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Nome</th>
+            <!-- <th>ID</th> -->
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Matrícula</th>
+            <th>Responsável</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Modal para exibir as informações do aluno -->
+  <dialog id="alunoModalInfo">
+    <div class="modal-content">
+        <button id="closeModal" class="close-button">X</button>
+        <h2>Detalhes do Aluno</h2>
+        <div id="alunoDetalhes">
+            <!-- Os detalhes serão inseridos dinamicamente -->
+        </div>
+    </div>
+</dialog>
+
+
+
+  <!-- Formulário de Cadastro de Aluno -->
+  <dialog class="modal" id="modal-register">
+    <!-- <div class="container" id="container"> -->
+      <!-- <div class="pop-out"> -->
+          <h2>Aluno</h2>
+          <span class="close" id="close-register-modal">X</span>
+          <h3>Informações essenciais</h3>
+          <form action="#" id="registerForm">
+            <div class="input-field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+            </div>
+            <div class="input-field">
+              <label for="telefone">Telefone</label>
+              <input type="text" id="telefone" name="telefone" placeholder="Telefone" required>
+            </div>
+            <div class="input-field">
+              <label for="rm">RM</label>
+              <input type="text" id="rm" name="rm" placeholder="RM" required>
+            </div>
+            <div class="input-field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="E-mail" required>
+            </div>
+            <div class="input-field">
+              <label for="responsavel">Responsável</label>
+              <input type="text" id="responsavel" name="responsavel" placeholder="Responsável" required>
+            </div>
+            <div class="upload-field">
+              <input type="file" id="imagem" name="imagem" accept="image/*">
+            </div>      
+            <div class="submit-info">
+              <button type="submit" id="submit-info">Enviar</button>
+          </form>
+        </div>
+      <!-- </div> -->
+    <!-- </div> -->
+  </dialog>
+
+
+<!-- Modal de Edição de Aluno -->
+<dialog class="modal modal-edit" id="modal-Edit-Student">
+  <h2>Editar Aluno</h2>
+  <span class="close" id="close-edit-modal">X</span>
+  <h3>Informações do Aluno</h3>
+  <form action="#" id="editForm">
+    <div class="input-field-edit">
+      <label for="edit-nome">Nome</label>
+      <input type="text" id="edit-nome" name="nome" placeholder="Nome completo">
+    </div>
+    <div class="input-field-edit">
+      <label for="edit-telefone">Telefone</label>
+      <input type="text" id="edit-telefone" name="telefone" placeholder="Telefone">
+    </div>
+    <div class="input-field-edit">
+      <label for="edit-rm">RM</label>
+      <input type="text" id="edit-rm" name="rm" placeholder="RM">
+    </div>
+    <div class="input-field-edit">
+      <label for="edit-email">E-mail</label>
+      <input type="email" id="edit-email" name="email" placeholder="E-mail">
+    </div>
+    <div class="input-field-edit">
+      <label for="edit-responsavel">Responsável</label>
+      <input type="text" id="edit-responsavel" name="responsavel" placeholder="Responsável">
+    </div>
+    <div class="upload-field-edit">
+      <input type="file" id="edit-imagem" name="imagem" accept="image/*">
+    </div>
+    <div class="submit-info-edit">
+      <button type="submit" id="submit-edit-info">Enviar</button>
+    </div>
+  </form>
+</dialog>
+
+
+<!-- Modal de Confirmação  edição -->
+<dialog class="modal modal-edit-confirm" id="modal-confirm">
+  <p class="modal-message">Você tem certeza que deseja editar este aluno?</p>
+  <div class="modal-actions">
+    <button class="btn-confirm" id="confirm-yes">Sim</button>
+    <button class="btn-cancel" id="confirm-no">Não</button>
+  </div>
+</dialog>
+
+<!-- Modal de Confirmação para Exclusão -->
+<dialog class="modal modal-delete-confirm" id="modal-confirm-delete">
+  <p class="modal-message">Você tem certeza que deseja excluir este aluno?</p>
+  <div class="modal-actions">
+    <button class="btn-confirm" id="confirm-yes-delete">Sim</button>
+    <button class="btn-cancel" id="confirm-no-delete">Não</button>
+  </div>
+</dialog>
+
+
+  <script src="js/studentslist.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/fetchStudent.js"></script>
+</body>
+</html>

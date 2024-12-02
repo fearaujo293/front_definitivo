@@ -1,0 +1,40 @@
+    /* Detalhes do Aluno */
+    .student-details {
+      font-family: "inter, bold";
+        max-width: 600px;
+        margin: 40px auto;
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+  
+      .student-details h2 {
+        color: #4a3cbf;
+        margin-bottom: 20px;
+      }
+  
+      .student-details p {
+        margin: 10px 0;
+      }
+  
+      .student-details strong {
+        color: #4a3cbf;
+      }
+  
+      .back-button {
+        display: inline-block;
+        background-color: #4a3cbf;
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        text-align: center;
+      }
+  
+      .back-button:hover {
+        background-color: #3729a1;
+      }

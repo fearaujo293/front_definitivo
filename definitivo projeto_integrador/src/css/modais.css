@@ -1,0 +1,370 @@
+/* Modal de Novo ALUNO */
+.modal {
+    font-family: 'Poppins', Extrabold;
+    background-color: #fff; /* Fundo branco para o conteúdo do modal */
+    padding: 20px 30px;
+    border-radius: 10px; /* Cantos arredondados */
+    width: 350px; /* Largura do modal */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    border: none;
+    position: relative; /* Para o botão de fechar */
+}
+
+/* Fundo escuro (overlay) */
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro com transparência */
+}
+
+/* Estilo do pop-out (container interno) */
+.pop-out {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do Modal */
+h2 {
+    font-family: cursive;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Estilo do botão de fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: #6a5acd;
+}
+
+/* Estilo do Formulário */
+form {
+    margin-top: 15px;
+}
+
+/* Campos de Input */
+.input-field {
+    margin-bottom: 15px;
+}
+
+.input-field label {
+    font-size: 14px;
+    color: #333;
+}
+
+.input-field input[type="text"],
+.input-field input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilo do campo de upload de imagem */
+.upload-field {
+    margin-bottom: 15px;
+}
+
+.upload-field input[type="file"] {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Botão de envio */
+.submit-info button {
+    background-color: #6a5acd;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-info button:hover {
+    background-color: #584ac5;
+}
+
+
+/* Modal de edição: */
+
+/* Modal de Edição */
+.modal-edit {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    position: relative;
+}
+
+/* Fundo escuro (overlay) */
+.modal-edit::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Título do Modal */
+.modal-edit h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.modal-edit h3 {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Botão de fechar */
+.modal-edit .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+.modal-edit .close:hover {
+    color: #6a5acd;
+}
+
+/* Campos de input */
+.input-field-edit {
+    margin-bottom: 15px;
+}
+
+.input-field-edit label {
+    font-size: 14px;
+    color: #333;
+}
+
+.input-field-edit input[type="text"],
+.input-field-edit input[type="email"] {
+    font-family: emoji;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Campo de upload */
+.upload-field-edit {
+    margin-bottom: 15px;
+}
+
+.upload-field-edit input[type="file"] {
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Botão de envio */
+.submit-info-edit button {
+    font-family: math;
+    background-color: #6a5acd;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-info-edit button:hover {
+    background-color: #584ac5;
+}
+
+/* Modais de CONFIRMAÇÃO */
+
+/* Estilo Base para Modais */
+.modal {
+    background-color: #fff; /* Fundo branco para o modal */
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    border: none;
+    position: relative;
+    z-index: 10; /* Garantir que fiquem acima de outros elementos */
+}
+
+/* Fundo escuro (overlay) */
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo com transparência */
+    z-index: 9;
+}
+
+/* Mensagem do Modal */
+.modal-message {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Ações do Modal */
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+/* Botões de Confirmação */
+.btn-confirm {
+    background-color: #4D44B5;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    flex: 1; /* Para ajustar os botões ao mesmo tamanho */
+}
+
+.btn-confirm:hover {
+    background-color: #218838;
+}
+
+/* Botões de Cancelamento */
+.btn-cancel {
+    background-color: #4D44B5; 
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.btn-cancel:hover {
+    background-color: #c9302c;
+}
+
+
+/* iNFO ALUNO */
+/* Modal Geral */
+#alunoModalInfo {
+    border: none;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Container Geral */
+.modal-content {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+}
+
+/* Botão de Fechar */
+#closeModal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Foto do Aluno */
+.aluno-photo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.aluno-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Informações do Aluno */
+.aluno-info {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.aluno-detalhe {
+    font-family: monospace;
+    font-style: oblique;
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px dashed #ddd;
+    color: #555;
+}
+
+.aluno-label {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Ações do Aluno */
+.aluno-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 15px;
+}
+
+.aluno-actions {
+    display: flex;
+    justify-content: flex-end; /* Alinha os botões à esquerda */
+    margin-top: 20px;
+}
+
+.aluno-btn-edit,
+.aluno-btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
