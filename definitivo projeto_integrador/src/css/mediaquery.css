@@ -1,0 +1,67 @@
+/* Estilos padrão (para computadores) */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte padrão */
+    background-color: #f4f4f4; /* Cor de fundo padrão */
+    color: #333; /* Cor do texto padrão */
+}
+
+/* Media Query para Tablets (768px a 992px) */
+@media (max-width: 992px) and (min-width: 768px) {
+    body {
+        background-color: #e0e0e0; /* Cor de fundo diferente para tablets */
+    }
+
+    header {
+        font-size: 1.5rem; /* Tamanho da fonte do cabeçalho para tablets */
+    }
+
+    .container {
+        padding: 15px; /* Ajuste de padding para tablets */
+    }
+
+    nav li {
+        font-size: 1.1rem; /* Tamanho da fonte dos itens de navegação para tablets */
+    }
+}
+
+/* Media Query para Celulares (até 768px) */
+@media (max-width: 768px) {
+    body {
+        background-color: #d0d0d0; /* Cor de fundo diferente para celulares */
+    }
+
+    header {
+        font-size: 1.2rem; /* Tamanho da fonte do cabeçalho para celulares */
+        text-align: center; /* Centraliza o texto do cabeçalho em celulares */
+    }
+
+    .container {
+        padding: 10px; /* Ajuste de padding para celulares */
+    }
+
+    nav li {
+        display: block; /* Exibe os itens de navegação como blocos em celulares */
+        margin-bottom: 10px; /* Adiciona espaçamento entre os itens de navegação */
+    }
+}
+
+/* Media Query para Computadores (a partir de 992px) */
+@media (min-width: 992px) {
+    body {
+        background-color: #f4f4f4; /* Cor de fundo padrão para computadores */
+    }
+
+    header {
+        font-size: 2rem; /* Tamanho da fonte do cabeçalho para computadores */
+        text-align: left; /* Alinha o texto do cabeçalho à esquerda em computadores */
+    }
+
+    .container {
+        padding: 20px; /* Padding padrão para computadores */
+    }
+
+    nav li {
+        display: inline; /* Exibe os itens de navegação em linha em computadores */
+        margin-right: 15px; /* Adiciona espaçamento entre os itens de navegação */
+    }
+}
